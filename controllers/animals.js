@@ -13,6 +13,10 @@ router.get('', async (req, res, next) => {
     }
 })
 
+router.get('/new', (req, res) => {
+    res.render("animals/new.ejs")
+})
+
 router.get('/:id', async (req, res, next) => {
     try {
         const myAnimals = await animals.findById(req.params.id);
@@ -20,6 +24,17 @@ router.get('/:id', async (req, res, next) => {
     } catch(err) {
         console.log(err);
         next();
+    }
+})
+
+router.post('', async (req, res, next) => {
+    try{
+        const myAnimals = await animals.create(req.body)
+        console.log(req.body)
+        res.redirect('/animals')
+    } catch(err) {
+        console.log(err)
+        next()
     }
 })
 

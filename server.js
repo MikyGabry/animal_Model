@@ -7,7 +7,7 @@ const { animals } = require('./models')
 
 app.set('view engine', 'ejs');
 // app.use(express.static('public'));
-// app.use(express.urlencoded({ extended:false }));
+app.use(express.urlencoded({ extended:false })); //req.body
 
 
 app.get('/', (req, res) => {
