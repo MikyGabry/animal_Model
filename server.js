@@ -6,7 +6,7 @@ const animalsController = require('./controllers/animals')
 const { animals } = require('./models')
 
 app.set('view engine', 'ejs');
-// app.use(express.static('public'));
+app.use(express.static('public')); //DOM e CSS
 app.use(express.urlencoded({ extended:false })); //req.body
 
 

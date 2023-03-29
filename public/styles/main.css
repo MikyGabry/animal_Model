@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(211, 251, 251);
+}
+
+nav {
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+.homePage {
+    font-size: xxx-large;
+    font-family: fantasy;
+    color: brown;
+}
+
+.imgIndex {
+    height: 200px;
+}
+
+.speciesFont {
+    color: tomato;
+    font-family: math;
+    font-size: 130%;
+}

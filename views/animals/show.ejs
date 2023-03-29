@@ -1,7 +1,7 @@
 <%- include('../partials/header.ejs', {name: "Image of " + animal.species + "s"}) %>
 
-    <h1><%= animal.species %></h1>
+    <h1 class="homePage"><%= animal.species %></h1>
     <img src= <%= animal.img %> alt= <%= "Image of " + animal.species + "s" %>>
-    <h3>Extinct: <%= animal.extinct %></h3>
-    <h3>Location: <%= animal.location %></h3>
-    <h3>Life Expectancy: <%= animal.lifeExpectancy %></h3>
+    <h3 class="speciesFont">Extinct: <%= animal.extinct %></h3>
+    <h3 class="speciesFont">Location: <%= animal.location %></h3>
+    <h3 class="speciesFont">Life Expectancy: <%= animal.lifeExpectancy %></h3>
