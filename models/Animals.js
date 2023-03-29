@@ -8,7 +8,7 @@ const animalsSchema = new mongoose.Schema(
         },
         extinct: {
             type: Boolean,
-            // default: false
+            default: false
         },
         location: {
             type: Array,
@@ -16,8 +16,8 @@ const animalsSchema = new mongoose.Schema(
         },
         lifeExpectancy: {
             type: Number,
-            // min: 1,
-            // max: 5000
+            min: 1,
+            max: 5000
         }
     },
     {

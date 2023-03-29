@@ -3,7 +3,8 @@ const app = express();
 const PORT = 4000;
 const animalsController = require('./controllers/animals')
 
-const { Animals } = require('./models')
+const { animals } = require('./models')
+// console.log(Animals)
 app.set('view engine', 'ejs');
 // app.use(express.static('public'));
 // app.use(express.urlencoded({ extended:false }));
