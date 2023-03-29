@@ -18,6 +18,10 @@ const animalsSchema = new mongoose.Schema(
             type: Number,
             min: 1,
             max: 5000
+        },
+        img: {
+            type: String, //Si deve mettere per forza?
+            require: [true, "Find an immage of this specie"]
         }
     },
     {
