@@ -1,10 +1,10 @@
 <%- include('../partials/header.ejs', {name: "All animal"}) %>
     <h1>Here are all the animal's species!</h1>
     <% for (i = 0; i < animals.length; i++) { %>
-        <h2><%= animals[i].species %></h2>
-        <img src= <%= animals[i].img %> alt="Image of <%= animals[i].species %>s">
-        <!-- <h2>Extinct: <%= animals[i].extinct %></h2>
-        <h2>Location: <%= animals[i].location %></h2> -->
+        <a href= 'animals/<%= animals[i].id %>'>
+            <h2><%= animals[i].species %></h2>
+            <img src= <%= animals[i].img %> alt="Image of <%= animals[i].species %>s">
+        </a>
         <hr>
     <% } %>
 </body>

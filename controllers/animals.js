@@ -13,4 +13,14 @@ router.get('', async (req, res, next) => {
     }
 })
 
+router.get('/:id', async (req, res, next) => {
+    try {
+        const myAnimals = await animals.findById(req.params.id);
+        res.render('animals/show.ejs', {animal: myAnimals})
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
 module.exports = router;
