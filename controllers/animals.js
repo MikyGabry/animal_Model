@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const {animals} = require('../models')
-console.log({animals})
 
 router.get('', async (req, res, next) => {
     try {
