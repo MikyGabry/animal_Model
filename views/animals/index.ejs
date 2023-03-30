@@ -1,5 +1,5 @@
 <%- include('../partials/header.ejs', {name: "All animal"}) %>
-    <h1 class="homePage">Here are all the animal's species!</h1>
+    <h1 class="homeTitle">Here are all the animal's species!</h1>
     <% for (i = 0; i < animals.length; i++) { %>
         <a href= 'animals/<%= animals[i].id %>'>
             <h2 class="speciesFont"><%= animals[i].species %></h2>

@@ -38,4 +38,15 @@ router.post('', async (req, res, next) => {
     }
 })
 
+router.get('/:id/edit', async (req, res, next) => {
+    try{
+        const animalToBeEdited = await animals.findById(req.params.id);
+        console.log(animalToBeEdited);
+        res.render('animals/edit.ejs', {animal : animalToBeEdited})
+    } catch(err) {
+        console.log(err);
+        next()
+    }
+})
+
 module.exports = router;

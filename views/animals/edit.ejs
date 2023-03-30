@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs', {name: "Edit " + animal.species}) %>
+<h1 class="homeTitle"><%= animal.species %></h1>
+    <form method="POST" action="/animals/<%= animal._id %>?_method=PUT">
+        <label for="species">Species:</label>
+        <input type="text" name="species" id="species" value="<%= animal.species %>">
+        <br>
+        <label for="extinct">Are they extinct? (true or false)</label>
+        <input type="text" name="extinct" id="extinct" value="<%= animal.extinct %>">
+        <br>
+        <label for="location">Location:</label>
+        <input type="array" name="location" id="location" value="<%= animal.location %>">
+        <br>
+        <label for="lifeExpectancy">How many year are they generally live?</label>
+        <input type="number" name="lifeExpectancy" id="lifeExpectancy" value="<%= animal.lifeExpectancy %>">
+        <br>
+        <label for="img">Image:</label>
+        <input type="text" name="img" id="img" value="<%= animal.img %>">
+        <br>
+        <input type="submit" value="Edit <%= animal.species %>">
+    </form>
+</body>
+</html>
