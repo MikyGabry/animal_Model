@@ -1,3 +1,4 @@
+const { resolveInclude } = require('ejs');
 const express = require('express');
 const router = express.Router();
 const {animals} = require('../models')
@@ -43,6 +44,17 @@ router.get('/:id/edit', async (req, res, next) => {
         const animalToBeEdited = await animals.findById(req.params.id);
         console.log(animalToBeEdited);
         res.render('animals/edit.ejs', {animal : animalToBeEdited})
+    } catch(err) {
+        console.log(err);
+        next()
+    }
+})
+
+router.put('/:id', async (req, res, next) => {
+    try{
+        const updatedSpecie = await animals.findByIdAndUpdate(req.params.id, req.body);
+        console.log(updatedSpecie);
+        res.redirect(`/animals/${req.params.id}`)
     } catch(err) {
         console.log(err);
         next()
