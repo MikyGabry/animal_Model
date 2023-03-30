@@ -5,5 +5,7 @@
     <h3 class="speciesFont">Extinct: <%= animal.extinct %></h3>
     <h3 class="speciesFont">Location: <%= animal.location %></h3>
     <h3 class="speciesFont">Life Expectancy: <%= animal.lifeExpectancy %></h3>
+    <a href="/animals/<%= animal._id %>/edit"><input type="button" value="Edit <%= animal.species %>"></a>
+    <a href="/animals/<%= animal._id %>/delete"><input type="button" value="Delete <%= animal.species %>"></a>
 </body>
 </html>
