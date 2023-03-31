@@ -73,3 +73,18 @@ body {
     background-color: green;
     color: white;
 }
+
+input {
+    border-radius: 8px;
+    color: chocolate;
+    border: cornflowerblue;
+    border-bottom-style: outset;
+    text-align: center;
+    font-family: inherit;
+}
+
+label {
+    color: green;
+    font-family: fantasy;
+    font-weight: 900;
+}
