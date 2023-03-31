@@ -40,6 +40,14 @@ body {
     font-size: 130%;
 }
 
+.speciesFontShow {
+    color: navy;
+    font-family: math;
+    font-size: medium;
+    font-style: italic;
+    font-weight: bolder;
+}
+
 .button1 {
     background-color: white;
     color: black;
