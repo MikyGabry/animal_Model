@@ -1,5 +1,6 @@
 <%- include('../partials/header.ejs', {name: "Delete " + animal.species}) %>
 <br>
 <form action="/animals/<%= animal._id %>?_method=DELETE" method="POST">
-    <input type="submit" value="Are you sure you want to delete <%= animal.species %>?">
+    <button class="button2">Are you sure you want to delete <%= animal.species %>?</button>
+    <!-- <input type="submit" value="Are you sure you want to delete <%= animal.species %>?"> -->
 </form>
