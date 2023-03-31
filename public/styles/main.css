@@ -24,10 +24,18 @@ body {
 
 .imgIndex {
     height: 200px;
+    border-radius: 12px;
 }
 
 .speciesFont {
-    color: tomato;
+    color: rgb(98, 43, 226);
+    font-family: math;
+    font-size: 130%;
+    transition-duration: 0.4s;
+}
+
+.speciesFont:hover {
+    color: cornflowerblue;
     font-family: math;
     font-size: 130%;
 }
