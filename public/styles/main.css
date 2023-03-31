@@ -96,3 +96,10 @@ label {
     font-family: fantasy;
     font-weight: 900;
 }
+
+.index {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
