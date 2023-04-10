@@ -30,7 +30,11 @@ router.get('/:id', async (req, res, next) => {
 
 router.post('', async (req, res, next) => {
     try{
-        const myAnimals = await animals.create(req.body)
+        let newAnimal = req.body
+        if (!newAnimal.extinct) {
+            newAnimal.extinct = false
+        }
+        const myAnimals = await animals.create(newAnimal)
         console.log(req.body)
         res.redirect('/animals')
     } catch(err) {

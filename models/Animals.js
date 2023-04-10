@@ -8,7 +8,7 @@ const animalsSchema = new mongoose.Schema(
         },
         extinct: {
             type: Boolean,
-            default: "false"
+            default: false
         },
         location: {
             type: Array,
