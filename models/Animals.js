@@ -22,6 +22,10 @@ const animalsSchema = new mongoose.Schema(
         img: {
             type: String, //Si deve mettere per forza?
             require: [true, "Find an immage of this specie"]
+        },
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'user'
         }
     },
     {
